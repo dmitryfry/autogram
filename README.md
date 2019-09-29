@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# instabot_with_watir
+* Demonstration of the possibilities of the watir on the example of the instagram bot
 
-Things you may want to cover:
+# install chromedriver
 
-* Ruby version
+$ sudo apt-get install chromium-chromedriver
+$ sudo ln -s /usr/lib/chromium-browser/chromedriver /usr/bin/chromedriver
 
-* System dependencies
+# Run
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. bundle
+2. bundle exec rake db:create
+3. bundle exec rake db:create RAILS_ENV=production
