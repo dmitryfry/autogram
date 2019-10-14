@@ -1,0 +1,3 @@
+class AutogramController < ApplicationController
+
+end
