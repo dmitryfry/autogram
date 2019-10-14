@@ -1,4 +1,4 @@
-class UnfollowController < ActionController::Base
+class UnfollowController < ApplicationController
 
   def initialize(count)
     @logins = Login.where(following: true, friend: false, used: false).first(count)
