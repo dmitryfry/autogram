@@ -1,0 +1,6 @@
+<h1>start</h1>
+
+<%= form_tag('/run',method: "post") do -%>
+  <div><%= text_field_tag :count %></div>
+  <div><%= submit_tag 'start' %></div>
+<% end -%>
