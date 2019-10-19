@@ -54,6 +54,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Network
+# Network
 gem 'watir'
 gem 'webdriver-user-agent'
+
+# Sidekiq uses threads to handle many jobs at the same time in the same process.
+gem 'sidekiq'
