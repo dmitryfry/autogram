@@ -1,5 +1,6 @@
 module Constants
-  LOGIN_BUTTON = %w(_0mzm- sqdOP L3NKy)
+  LOGIN_BUTTON = %w(sqdOP L3NKy y3zKF)
+  LOGIN_BUTTON_CLICK = "document.getElementsByClassName('sqdOP L3NKy y3zKF')[0].click()"
   UNFOLLOWING = %w(aOOlW -Cab_)
   LOGIN_PAGE = 'instagram.com/accounts/login'
   FOLLOW_PRIVATE_PAGE = %w(BY3EC _0mzm- sqdOP L3NKy)
