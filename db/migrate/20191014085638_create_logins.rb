@@ -7,6 +7,6 @@ class CreateLogins < ActiveRecord::Migration[5.2]
       t.boolean :used
 
       t.timestamps
-    end if_exists: false
+    end unless table_exists?(:logins)
   end
 end
