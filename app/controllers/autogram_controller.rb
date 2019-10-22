@@ -22,6 +22,7 @@ class AutogramController < ApplicationController
 
   def authentication(browser)
     browser.goto LOGIN_PAGE
+    puts 'goto LOGIN_PAGE'
     sleep(rand(3..7))
     browser.text_field(:name => 'username').set $username
     sleep(rand(3..7))
@@ -30,6 +31,7 @@ class AutogramController < ApplicationController
     #Click login button
     # browser.button(class: LOGIN_BUTTON).click
     browser.driver.execute_script(LOGIN_BUTTON_CLICK)
+    puts 'LOGIN_BUTTON_CLICK'
     sleep(rand(6..10))
   end
 
