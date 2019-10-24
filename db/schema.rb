@@ -12,13 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2019_10_14_085638) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "logins", force: :cascade do |t|
-    t.string "name"
-    t.boolean "following"
-    t.boolean "friend"
-    t.boolean "used"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "following", default: false
+    t.boolean "friend", default: false
+    t.boolean "used", default: false
   end
 
 end
