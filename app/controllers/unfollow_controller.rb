@@ -25,10 +25,10 @@ class UnfollowController < ApplicationController
         #   logger.info("REQUESTED exists")
         #   login.used = true
         #   login.save
-        elsif browser.button(class: FOLLOWING).exists?
-          logger.info("FOLLOWING exists")
+        elsif browser.button(class: FOLLOWING_OR_REQUESTED).exists?
+          logger.info("FOLLOWING_OR_REQUESTED exists")
           begin
-            browser.button(class: FOLLOWING).click
+            browser.button(class: FOLLOWING_OR_REQUESTED).click
           rescue
           end
           if browser.button(class: UNFOLLOWING).exists?
