@@ -7,7 +7,7 @@ class UnfollowController < ApplicationController
   def unfollow(browser)
 
     AutogramController.new.authentication(browser)
-    
+
     @logins.each do |login|
       browser.goto "instagram.com/#{login.name}/"
       sleep(rand(10..20))
@@ -38,7 +38,7 @@ class UnfollowController < ApplicationController
           end
         end
       end
-      sleep(rand(180..260))
+      sleep(rand(80..100))
     end
     # UnfollowWorker.perform_async(browser)
     # redirect_to action: :start
