@@ -21,10 +21,10 @@ class UnfollowController < ApplicationController
           logger.info("FOLLOW_PRIVATE_PAGE exists")
           login.used = true
           login.save
-        elsif browser.button(class: REQUESTED).exists?
-          logger.info("REQUESTED exists")
-          login.used = true
-          login.save
+        # elsif browser.button(class: REQUESTED).exists?
+        #   logger.info("REQUESTED exists")
+        #   login.used = true
+        #   login.save
         elsif browser.button(class: FOLLOWING).exists?
           logger.info("FOLLOWING exists")
           begin
