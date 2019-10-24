@@ -17,18 +17,30 @@ class UnfollowController < ApplicationController
         login.used = true
         login.save
       else
-        if browser.button(class: FOLLOW).exists? || browser.button(class: FOLLOW_PRIVATE_PAGE).exists?
-          logger.info("FOLLOW_PRIVATE_PAGE exists")
+        if browser.button(text: FOLLOW_TEXT).exists? #|| browser.button(text: FOLLOW_PRIVATE_PAGE).exists?
+          logger.info("FOLLOW exists")
           login.used = true
           login.save
-        # elsif browser.button(class: REQUESTED).exists?
-        #   logger.info("REQUESTED exists")
-        #   login.used = true
-        #   login.save
-        elsif browser.button(class: FOLLOWING_OR_REQUESTED).exists?
-          logger.info("FOLLOWING_OR_REQUESTED exists")
+        elsif browser.button(text: FOLLOWING_TEXT).exists?
+          logger.info("FOLLOWING exists")
           begin
-            browser.button(class: FOLLOWING_OR_REQUESTED).click
+            browser.button(text: FOLLOWING_TEXT).click
+          rescue
+          end
+          if browser.button(class: UNFOLLOWING).exists?
+            logger.info("UNFOLLOWING exists")
+            sleep(rand(2..7))
+            begin
+              browser.button(class: UNFOLLOWING).click
+            rescue
+            end
+            login.used = true
+            login.save
+          end
+        elsif browser.button(text: REQUESTED_TEXT).exists?
+          logger.info("REQUESTED exists")
+          begin
+            browser.button(text: REQUESTED_TEXT).click
           rescue
           end
           if browser.button(class: UNFOLLOWING).exists?

@@ -12,4 +12,8 @@ module Constants
   TO_LIKE = "document.getElementsByClassName('glyphsSpriteHeart__outline__24__grey_9 u-__7')[1].click()"
   BACKGROUND_CLICK = "document.getElementsByClassName('_2dDPU')[0].click()"
   # REQUESTED = %w(BY3EC sqdOP L3NKy _8A5w5)
+
+  FOLLOW_TEXT = 'Follow'
+  FOLLOWING_TEXT = 'Following'
+  REQUESTED_TEXT = 'Requested'
 end
