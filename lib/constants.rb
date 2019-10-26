@@ -16,4 +16,5 @@ module Constants
   FOLLOW_TEXT = 'Follow'
   FOLLOWING_TEXT = 'Following'
   REQUESTED_TEXT = 'Requested'
+  FOLLOW_BACK_TEXT = 'Follow Back'
 end

@@ -49,8 +49,8 @@ class UnfollowController < ApplicationController
             login.used = true
             login.save
           end
-        elsif browser.button(text: FOLLOW_TEXT).exists? #|| browser.button(text: FOLLOW_PRIVATE_PAGE).exists?
-          logger.info("FOLLOW exists")
+        elsif browser.button(text: FOLLOW_TEXT).exists? || browser.button(text: FOLLOW_BACK_TEXT).exists?
+          logger.info("FOLLOW or Follow back exists")
           login.used = true
           login.save
         end
